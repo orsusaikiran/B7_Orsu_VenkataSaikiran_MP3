@@ -1,0 +1,186 @@
+{
+  "generated_at": "2026-05-01T05:57:50.008641+00:00",
+  "total": 12,
+  "incidents": [
+    {
+      "id": "INC001",
+      "title": "Database connection timeout on prod-db01",
+      "description": "Production database prod-db01 is not accepting connections. Application is down causing full service outage. IP 10.0.1.5 unreachable on TCP port 5432.",
+      "reported_by": "Roy",
+      "timestamp": "2026-04-30T08:42:00+00:00",
+      "assigned_team": "Database-Ops",
+      "severity": "critical",
+      "type": "app",
+      "ticket_ids": {
+        "snow": "MOCK-SNOW-INC001",
+        "jira": "IT-288",
+        "azure": "AB-30888"
+      }
+    },
+    {
+      "id": "INC002",
+      "title": "Suspicious login attempts from unknown IP",
+      "description": "Multiple unauthorized login attempts detected from source IP 185.220.101.42. Brute-force pattern identified on the SSH gateway. Security team alerted.",
+      "reported_by": "John",
+      "timestamp": "2026-04-30T09:15:00+00:00",
+      "assigned_team": "Security-Ops",
+      "severity": "high",
+      "type": "security",
+      "ticket_ids": {
+        "snow": "MOCK-SNOW-INC002",
+        "jira": "IT-579",
+        "azure": "AB-80679"
+      }
+    },
+    {
+      "id": "INC003",
+      "title": "Checkout service returning NullPointerException",
+      "description": "The checkout-service API is throwing a NullPointerException at PaymentProcessor.java:88. Stack trace available in Kibana. HTTP-500 errors spiking. Service is failing.",
+      "reported_by": "sam",
+      "timestamp": "2026-04-30T09:58:00+00:00",
+      "assigned_team": "Backend-Dev",
+      "severity": "high",
+      "type": "app",
+      "ticket_ids": {
+        "snow": "MOCK-SNOW-INC003",
+        "jira": "IT-559",
+        "azure": "AB-28459"
+      }
+    },
+    {
+      "id": "INC004",
+      "title": "Network switch offline in DC rack B",
+      "description": "Core network switch SW-RACK-B-02 is offline. VLAN 10 and VLAN 20 are unreachable. 40+ servers affected in DC rack B. Production traffic down.",
+      "reported_by": "nagios",
+      "timestamp": "2026-04-30T10:20:00+00:00",
+      "assigned_team": "Network-Infra",
+      "severity": "critical",
+      "type": "network",
+      "ticket_ids": {
+        "snow": "MOCK-SNOW-INC004",
+        "jira": "IT-612",
+        "azure": "AB-78012"
+      }
+    },
+    {
+      "id": "INC005",
+      "title": "Ransomware signature detected on workstation",
+      "description": "EDR tool flagged ransomware signature RANSOM.LOCKBIT on workstation WS-FIN-042 (IP 192.168.50.42). File encryption activity observed. Production data at risk. Emergency response needed.",
+      "reported_by": "Frod",
+      "timestamp": "2026-04-30T11:05:00+00:00",
+      "assigned_team": "Security-Ops",
+      "severity": "critical",
+      "type": "security",
+      "ticket_ids": {
+        "snow": "MOCK-SNOW-INC005",
+        "jira": "IT-889",
+        "azure": "AB-64789"
+      }
+    },
+    {
+      "id": "INC006",
+      "title": "Payment gateway timeout \u2014 Stripe API 503",
+      "description": "Payment gateway is receiving HTTP-503 responses from the Stripe API. P99 latency has exceeded 10 seconds. Checkout transactions are failing. Application error code: PAY-TIMEOUT-001.",
+      "reported_by": "Charlie",
+      "timestamp": "2026-04-30T11:30:00+00:00",
+      "assigned_team": "Backend-Dev",
+      "severity": "high",
+      "type": "app",
+      "ticket_ids": {
+        "snow": "MOCK-SNOW-INC006",
+        "jira": "IT-725",
+        "azure": "AB-14225"
+      }
+    },
+    {
+      "id": "INC007",
+      "title": "Intermittent packet loss on VLAN 30",
+      "description": "Network monitoring shows intermittent packet loss (8-15%) on VLAN 30 segment 10.2.30.0/24. Protocol UDP streams affected. Performance degraded but not fully down.",
+      "reported_by": "Nitan",
+      "timestamp": "2026-04-30T12:10:00+00:00",
+      "assigned_team": "Network-Infra",
+      "severity": "critical",
+      "type": "network",
+      "ticket_ids": {
+        "snow": "MOCK-SNOW-INC007",
+        "jira": "IT-831",
+        "azure": "AB-62931"
+      }
+    },
+    {
+      "id": "INC008",
+      "title": "Phishing email reported by 3 employees",
+      "description": "Three employees in the Finance department reported receiving a phishing email impersonating the CEO. Email contains a malicious link. Credential harvesting suspected. Medium risk \u2014 no clicks confirmed yet.",
+      "reported_by": "Rom",
+      "timestamp": "2026-04-30T13:00:00+00:00",
+      "assigned_team": "Security-Ops",
+      "severity": "medium",
+      "type": "security",
+      "ticket_ids": {
+        "snow": "MOCK-SNOW-INC008",
+        "jira": "IT-976",
+        "azure": "AB-76576"
+      }
+    },
+    {
+      "id": "INC009",
+      "title": "API response slow \u2014 P95 latency 4.2s",
+      "description": "The user-profile API service is responding slowly. P95 latency has risen to 4.2 seconds (SLA: 500ms). Degraded performance observed for 30 minutes. Root cause under investigation.",
+      "reported_by": "Samir",
+      "timestamp": "2026-04-30T13:45:00+00:00",
+      "assigned_team": "Backend-Dev",
+      "severity": "medium",
+      "type": "app",
+      "ticket_ids": {
+        "snow": "MOCK-SNOW-INC009",
+        "jira": "IT-663",
+        "azure": "AB-87063"
+      }
+    },
+    {
+      "id": "INC010",
+      "title": "Scheduled job failed \u2014 non-production env",
+      "description": "Nightly ETL batch job failed in the staging environment with error code ETL-EXIT-1. Non-production system. No customer impact. Low priority for remediation.",
+      "reported_by": "Subha",
+      "timestamp": "2026-04-30T02:30:00+00:00",
+      "assigned_team": "Data-Engineering",
+      "severity": "critical",
+      "type": "app",
+      "ticket_ids": {
+        "snow": "MOCK-SNOW-INC010",
+        "jira": "IT-823",
+        "azure": "AB-47623"
+      }
+    },
+    {
+      "id": "INC011",
+      "title": "Minor firewall rule misconfiguration found",
+      "description": "Routine security audit found a minor firewall rule permitting unnecessary ICMP traffic from VLAN 99 to DMZ. No active exploitation detected. Low severity vulnerability to be patched in next change window.",
+      "reported_by": "sanat",
+      "timestamp": "2026-04-30T14:20:00+00:00",
+      "assigned_team": "Security-Ops",
+      "severity": "low",
+      "type": "network",
+      "ticket_ids": {
+        "snow": "MOCK-SNOW-INC011",
+        "jira": "IT-939",
+        "azure": "AB-26139"
+      }
+    },
+    {
+      "id": "INC012",
+      "title": "DNS resolution intermittent on 10.2.0.0/16",
+      "description": "DNS resolution is intermittently failing for hosts on subnet 10.2.0.0/16. Packet captures show UDP DNS queries timing out every 3-4 minutes. Network team investigating the resolver 10.2.0.1.",
+      "reported_by": "nas",
+      "timestamp": "2026-04-30T14:55:00+00:00",
+      "assigned_team": "Network-Infra",
+      "severity": "high",
+      "type": "network",
+      "ticket_ids": {
+        "snow": "MOCK-SNOW-INC012",
+        "jira": "IT-839",
+        "azure": "AB-55739"
+      }
+    }
+  ]
+}
